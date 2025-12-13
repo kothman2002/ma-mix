@@ -170,7 +170,6 @@ if (!isset($_SESSION['visited'])) {
     background: url('assets/img/backk.png') center / cover no-repeat;
 }
 
-/* الخلفية السفلية */
 .services-bg {
     width: 100%;
     height: 320px;
@@ -182,7 +181,6 @@ if (!isset($_SESSION['visited'])) {
     border-radius: 120px 120px 0 0;
 }
 
-/* السلايدر */
 .services-slider {
     position: relative;
     height: 555px;
@@ -190,7 +188,6 @@ if (!isset($_SESSION['visited'])) {
     z-index: 2;
 }
 
-/* المجموعة */
 .services-container {
     position: absolute;
     inset: 0;
@@ -198,7 +195,6 @@ if (!isset($_SESSION['visited'])) {
     justify-content: center;
     gap: 60px;
 
-    /* أهم سطرين للأداء */
     visibility: hidden;
     pointer-events: none;
 
@@ -232,10 +228,10 @@ if (!isset($_SESSION['visited'])) {
 
 .service-img {
     width: 100%;
-    height: 240px;
+    height: 140px;
     object-fit: cover;
     display: block;
-    border-bottom: 3px solid #b5d4ff;
+    border-bottom: 2px solid #b5d4ff;
 }
 
 .service-text {
