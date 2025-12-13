@@ -2,7 +2,7 @@
 
     <div class="partners-container">
 
-        <h2 class="partners-title">شركاء النجاح</h2>
+        <h2 class="partners-title">شركائنا بالنجاح </h2>
 
         <div class="partners-row">
             <img src="assets/img/f1.png" alt="">

@@ -65,7 +65,7 @@ $conn->query("INSERT INTO visits (visited_at) VALUES (NOW())");
             position: relative;
             margin-top: 90px;
             opacity: 1;
-            transition: opacity 1.5s ease-in-out;
+            transition: opacity 1.8s ease-in-out;
         }
 
         .hero-overlay {
@@ -297,7 +297,7 @@ $conn->query("INSERT INTO visits (visited_at) VALUES (NOW())");
             font-weight: 700;
             letter-spacing: .5px;
         }
-
+/*
         .arrow {
             position: absolute;
             top: 50%;
@@ -322,7 +322,7 @@ $conn->query("INSERT INTO visits (visited_at) VALUES (NOW())");
 
         .arrow-left { right: 25px; }
         .arrow-right { left: 25px; }
-
+*/
         /* ============================
            WHY US SECTION 
         ============================ */
