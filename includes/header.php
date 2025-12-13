@@ -1,5 +1,5 @@
 <?php
-require_once "../includes/db.php";
+require_once "includes/db.php";
 $conn->query("INSERT INTO visits (visited_at) VALUES (NOW())");
 ?>
 <!DOCTYPE html>
