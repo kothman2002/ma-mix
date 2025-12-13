@@ -352,9 +352,10 @@ $conn->query("INSERT INTO visits (visited_at) VALUES (NOW())");
         }
 
         #why-us-section .why-content {
-            width: 40%;
-            z-index: 2; 
-            text-align: right;
+             width: 55%;
+    max-width: 900px;
+    z-index: 2;
+    text-align: right;
         }
 
         #why-us-section h2 {
@@ -365,12 +366,10 @@ $conn->query("INSERT INTO visits (visited_at) VALUES (NOW())");
         }
 
         #why-us-section p {
-            font-size: 32px;
-            line-height: 2.2;
+            font-size: 24px;
+            line-height: 2.1;
             font-weight: 400;
             color: #ffffff;
-            padding: 18px 25px;
-            backdrop-filter: blur(3px);
         }
 
         /* ===============================
