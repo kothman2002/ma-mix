@@ -109,7 +109,7 @@ if (!isset($_SESSION['visited'])) {
         /* ======================= ABOUT ======================= */
         #about {
             width: 100%;
-            background-image: url('assets/img/our.png');
+            background-image: url('assets/img/our.png ');
             background-size: cover;
             background-position: center;
             padding: 120px 0 180px 0;
@@ -161,78 +161,96 @@ if (!isset($_SESSION['visited'])) {
             font-weight:400;
         }
 
-        /* ======================= SERVICES ======================= */
-        #services {
-            padding:120px 0;
-            position:relative;
-             min-height: 600px; 
-            background-image: url('assets/img/backk.png'); 
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+   /* ======================= SERVICES (OPTIMIZED) ======================= */
 
-        .services-bg {
-            width: 100%;
-            height: 320px;
-            background: linear-gradient(to right, rgba(60,162,204,0.80), rgba(44,69,122,0.80));
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            z-index: 1;
-            border-radius: 120px 120px 0 0;
-        }
+#services {
+    padding: 120px 0;
+    position: relative;
+    min-height: 600px;
+    background: url('assets/img/backk.png') center / cover no-repeat;
+}
 
-        .services-slider {
-            position: relative;
-             height: 555px;
-            width: 100%;
-        }
-
-       .services-container {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* الخلفية السفلية */
+.services-bg {
     width: 100%;
+    height: 320px;
+    background: linear-gradient(to right, rgba(60,162,204,0.8), rgba(44,69,122,0.8));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 120px 120px 0 0;
+}
+
+/* السلايدر */
+.services-slider {
+    position: relative;
+    height: 555px;
+    width: 100%;
+    z-index: 2;
+}
+
+/* المجموعة */
+.services-container {
+    position: absolute;
+    inset: 0;
     display: flex;
     justify-content: center;
     gap: 60px;
+
+    /* أهم سطرين للأداء */
+    visibility: hidden;
+    pointer-events: none;
+
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 1.2s ease, transform 1.2s ease;
+    transform: translateY(25px);
+    transition: opacity .6s ease, transform .6s ease;
 }
 
-       .services-container.active {
+/* المجموعة النشطة فقط */
+.services-container.active {
+    visibility: visible;
+    pointer-events: auto;
+
     opacity: 1;
     transform: translateY(0);
 }
 
-        .service-card {
-            width: 330px;
-            background: white;
-            border-radius: 40px;
-            padding-bottom: 25px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-            text-align: center;
-            overflow: hidden;
-            border: 4px solid #cde4ff;
-            transition: transform .6s ease, opacity .6s ease;
-        }
+/* الكرت */
+.service-card {
+    width: 330px;
+    background: #fff;
+    border-radius: 32px;
+    padding-bottom: 25px;
+    text-align: center;
+    overflow: hidden;
+    border: 3px solid #cde4ff;
 
-        .service-img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            border-bottom: 4px solid #b5d4ff;
-        }
+    /* shadow أخف */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 
-        .service-text {
-            font-size: 20px;
-            margin-top: 18px;
-            line-height: 32px;
-            font-weight: 600;
-            color: #333;
-        }
+    /* منع إعادة الرسم */
+    will-change: transform;
+}
+
+/* الصورة */
+.service-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 3px solid #b5d4ff;
+}
+
+/* النص */
+.service-text {
+    font-size: 20px;
+    margin-top: 18px;
+    line-height: 32px;
+    font-weight: 600;
+    color: #333;
+}
+
 
         /* ======================= FIELDS SLIDER ======================= */
         #fields-slider-section {
