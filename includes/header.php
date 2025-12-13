@@ -161,19 +161,27 @@ if (!isset($_SESSION['visited'])) {
             font-weight:400;
         }
 
-   /* ======================= SERVICES (OPTIMIZED) ======================= */
+ /* ======================= SERVICES ======================= */
 
 #services {
     padding: 120px 0;
     position: relative;
     min-height: 600px;
-    background: url('assets/img/backk.png') center / cover no-repeat;
+    background-image: url('assets/img/backk.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
+/* الخلفية السفلية */
 .services-bg {
     width: 100%;
     height: 320px;
-    background: linear-gradient(to right, rgba(60,162,204,0.8), rgba(44,69,122,0.8));
+    background: linear-gradient(
+        to right,
+        rgba(60,162,204,0.80),
+        rgba(44,69,122,0.80)
+    );
     position: absolute;
     bottom: 0;
     left: 0;
@@ -181,6 +189,7 @@ if (!isset($_SESSION['visited'])) {
     border-radius: 120px 120px 0 0;
 }
 
+/* السلايدر */
 .services-slider {
     position: relative;
     height: 555px;
@@ -188,21 +197,28 @@ if (!isset($_SESSION['visited'])) {
     z-index: 2;
 }
 
+/* المجموعات */
 .services-container {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+
     display: flex;
     justify-content: center;
     gap: 60px;
 
+    /* حل البطء */
     visibility: hidden;
     pointer-events: none;
 
     opacity: 0;
-    transform: translateY(25px);
+    transform: translateY(40px);
+
     transition: opacity .6s ease, transform .6s ease;
 }
 
+/* المجموعة النشطة فقط */
 .services-container.active {
     visibility: visible;
     pointer-events: auto;
@@ -211,29 +227,34 @@ if (!isset($_SESSION['visited'])) {
     transform: translateY(0);
 }
 
+/* ======================= SERVICE CARD ======================= */
+
 .service-card {
     width: 330px;
     background: white;
-    border-radius: 40px; 
+    border-radius: 40px;
     padding-bottom: 25px;
-    text-align: center;
-    overflow: hidden;
-    border: 4px solid #cde4ff;
 
     box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    text-align: center;
+    overflow: hidden;
 
+    border: 4px solid #cde4ff;
+
+    /* تحسين الأداء */
     will-change: transform;
 }
 
-
+/* الصورة */
 .service-img {
     width: 100%;
-    height: 140px;
+    height: 240px;
     object-fit: cover;
+    border-bottom: 4px solid #b5d4ff;
     display: block;
-    border-bottom: 2px solid #b5d4ff;
 }
 
+/* النص */
 .service-text {
     font-size: 20px;
     margin-top: 18px;
@@ -241,6 +262,7 @@ if (!isset($_SESSION['visited'])) {
     font-weight: 600;
     color: #333;
 }
+
 
 
         /* ======================= FIELDS SLIDER ======================= */
