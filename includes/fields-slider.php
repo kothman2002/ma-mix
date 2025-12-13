@@ -28,9 +28,7 @@
 
     </div>
 
-    <div class="arrow arrow-left" onclick="prevSlide()">&#10094;</div>
-    <div class="arrow arrow-right" onclick="nextSlide()">&#10095;</div>
-
+    
 </section>
 
 <script>
