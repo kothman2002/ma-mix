@@ -1,7 +1,14 @@
 <?php
-require_once "includes/db.php";
-$conn->query("INSERT INTO visits (visited_at) VALUES (NOW())");
+session_start();
+
+if (!isset($_SESSION['visited'])) {
+    $_SESSION['visited'] = true;
+
+    require_once __DIR__ . "/db.php";
+    $conn->query("INSERT INTO visits (visited_at) VALUES (NOW())");
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
