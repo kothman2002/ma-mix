@@ -1,4 +1,5 @@
 <div class="top-bar">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <div class="nav-links">
         <a href="#about">من نحن</a>
         <a href="#services">خدماتنا</a>

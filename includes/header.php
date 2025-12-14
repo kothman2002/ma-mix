@@ -50,6 +50,9 @@ if (!isset($_SESSION['visited'])) {
             padding: 0 60px;
             z-index: 9999;
             box-shadow: 0px 3px 10px rgba(0,0,0,0.15);
+            .menu-toggle {
+    display: none;
+}
         }
 
         .nav-links { display: flex; gap: 45px; }
@@ -635,5 +638,10 @@ if (!isset($_SESSION['visited'])) {
         <link rel="stylesheet" href="assets/css/mobile.css">
 
 </head>
+<script>
+function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+}
+</script>
 
 <body>
