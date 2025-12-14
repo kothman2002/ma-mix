@@ -1,150 +1,158 @@
-/* =========================
-   MOBILE ONLY CSS – MA MIX
-   ========================= */
-
+/* ===============================
+   MOBILE FIXES – MA MIX
+=============================== */
 @media (max-width: 768px) {
 
-  /* ===== منع السكرول الأفقي ===== */
-  html, body {
-    overflow-x: hidden;
-  }
+    /* ===== NAVBAR ===== */
+    .top-bar {
+        height: auto;
+        padding: 10px 15px;
+        flex-direction: column;
+    }
 
-  /* ===== إعدادات عامة للأقسام ===== */
-  section {
-    height: auto !important;
-    min-height: unset !important;
-    padding: 60px 16px !important;
-  }
+    .logo {
+        width: 120px;
+        margin-bottom: 8px;
+    }
 
-  /* =========================
-     NAVBAR (TOP BAR)
-     ========================= */
+    .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
 
-  /* إخفاء روابط الديسكتوب */
-  .nav-links {
-    display: none !important;
-  }
+    .nav-links a {
+        font-size: 14px;
+        padding: 4px 6px;
+        white-space: nowrap;
+    }
 
-  /* ترتيب الهيدر */
-  .top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 16px;
-  }
+    /* ===== HERO ===== */
+    .hero {
+        height: 55vh;
+        margin-top: 120px;
+    }
 
-  /* اللوجو */
-  .logo {
-    max-width: 120px;
-    height: auto;
-  }
+    .hero-title {
+        bottom: 40%;
+        right: 50%;
+        transform: translateX(50%);
+        text-align: center;
+    }
 
-  /* زر ☰ */
-  .mobile-menu-btn {
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
-    color: #000; /* عدلها إذا الهيدر غامق */
-    user-select: none;
-  }
+    .hero-title img {
+        width: 300px;
+    }
 
-  /* =========================
-     MOBILE MENU
-     ========================= */
+    .floating-icons {
+        left: 10px;
+        bottom: 20px;
+    }
 
-  .mobile-menu {
-    position: fixed;
-    top: 75px;
-    right: 0;
-    width: 100%;
-    background: linear-gradient(to left, #3d78a5, #2b4c71);
-    display: none;
-    flex-direction: column;
-    text-align: center;
-    z-index: 9999;
-  }
+    .floating-icons img {
+        width: 65px;
+    }
 
-  .mobile-menu a {
-    color: #fff;
-    padding: 16px;
-    font-size: 18px;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255,255,255,0.25);
-  }
+    /* ===== ABOUT ===== */
+    #about {
+        padding: 80px 0;
+    }
 
-  .mobile-menu a:last-child {
-    border-bottom: none;
-  }
+    .about-container {
+        width: 92%;
+    }
 
-  .mobile-menu.show {
-    display: flex;
-  }
+    .about-content-box {
+        width: 100%;
+        text-align: center;
+    }
 
-  /* =========================
-     HERO SECTION
-     ========================= */
+    .about-title-left {
+        display: none;
+    }
 
-  .hero,
-  .hero-section,
-  #hero {
-    height: 60vh !important;
-    background-position: center center !important;
-    background-size: cover !important;
-  }
+    .about-text {
+        font-size: 17px;
+        line-height: 30px;
+    }
 
-  /* =========================
-     TEXT CONTENT SECTIONS
-     ========================= */
+    /* ===== SERVICES ===== */
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
 
-  .why-content,
-  .about-content,
-  .content-wrapper {
-    width: 100% !important;
-    padding: 20px !important;
-    text-align: center !important;
-  }
+    .service-card {
+        width: 90%;
+    }
 
-  h1, h2, h3 {
-    font-size: 26px !important;
-    line-height: 1.4;
-  }
+    .service-img {
+        height: 200px;
+    }
 
-  p {
-    font-size: 15px !important;
-    line-height: 1.7;
-  }
+    /* ===== FIELDS SLIDER ===== */
+    .fields-slider {
+        height: 420px;
+    }
 
-  /* =========================
-     SERVICES
-     ========================= */
+    .fields-title {
+        width: 240px;
+        right: 50%;
+        transform: translateX(50%);
+    }
 
-  .services-container,
-  .services-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 20px !important;
-  }
+    .field-caption {
+        font-size: 18px;
+        padding: 8px 18px;
+        bottom: 25px;
+        right: 20px;
+    }
 
-  .service-card {
-    width: 100% !important;
-  }
+    /* ===== WHY US ===== */
+    #why-us-section {
+        height: auto;
+        padding: 70px 20px;
+        justify-content: center;
+        text-align: center;
+    }
 
-  /* =========================
-     PARTNERS
-     ========================= */
+    #why-us-section .why-content {
+        width: 100%;
+        text-align: center;
+    }
 
-  .partners-logos {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 20px !important;
-  }
+    #why-us-section h2 {
+        font-size: 34px;
+    }
 
-  /* =========================
-     FORMS
-     ========================= */
+    #why-us-section p {
+        font-size: 18px;
+        line-height: 1.9;
+    }
 
-  form {
-    width: 100% !important;
-  }
+    /* ===== PARTNERS ===== */
+    .partners-row {
+        gap: 40px;
+    }
 
+    .partners-row img {
+        width: 110px;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-form-box {
+        width: 92%;
+        padding: 30px 20px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer-container {
+        text-align: center;
+    }
+
+    .footer-col {
+        width: 100%;
+    }
 }
