@@ -50,10 +50,11 @@ if (!isset($_SESSION['visited'])) {
             padding: 0 60px;
             z-index: 9999;
             box-shadow: 0px 3px 10px rgba(0,0,0,0.15);
-            .menu-toggle {
+
+        }
+                    .menu-toggle {
     display: none;
 }
-        }
 
         .nav-links { display: flex; gap: 45px; }
 
