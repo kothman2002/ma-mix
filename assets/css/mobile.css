@@ -83,3 +83,46 @@
         width: 55px;
     }
 }
+@media (max-width: 768px) {
+
+    /* =====================
+       FIX ABOUT SECTION
+    ====================== */
+
+    #about {
+        padding: 60px 15px !important;
+        background-image: none !important; /* نشيل الخلفية */
+    }
+
+    .about-container {
+        width: 100% !important;
+        padding: 0 10px;
+    }
+
+    .about-title-left {
+        display: none !important; /* العنوان الكبير */
+    }
+
+    .about-content-box {
+        width: 100% !important;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .about-heading {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .about-text {
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+    /* زر واتساب */
+    .about-content-box .whatsapp-btn,
+    .about-content-box a {
+        display: inline-block;
+        margin-top: 15px;
+    }
+}
