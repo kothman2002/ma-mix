@@ -638,10 +638,5 @@ if (!isset($_SESSION['visited'])) {
         <link rel="stylesheet" href="assets/css/mobile.css">
 
 </head>
-<script>
-function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('active');
-}
-</script>
 
 <body>

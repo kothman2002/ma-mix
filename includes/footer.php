@@ -42,4 +42,11 @@
         © 2025 M A MIX — جميع الحقوق محفوظة
     </div>
 
+    <script>
+function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+}
+</script>
+
+
 </footer>
