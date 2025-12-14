@@ -109,7 +109,7 @@ if (!isset($_SESSION['visited'])) {
         /* ======================= ABOUT ======================= */
         #about {
             width: 100%;
-            background-image: url('assets/img/our.png ');
+          background-image: url('assets/img/our.webp');
             background-size: cover;
             background-position: center;
             padding: 120px 0 180px 0;
