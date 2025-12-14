@@ -85,7 +85,7 @@
 }
 
 .title-box span {
-    background: linear-gradient(to left, #2da6ff, #155f9b);
+                background: linear-gradient(to right, #43a7cf, #2f4a80);
     color: #fff;
     padding: 6px 15px;
     border-radius: 8px;

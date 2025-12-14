@@ -173,7 +173,6 @@ if (!isset($_SESSION['visited'])) {
     background-repeat: no-repeat;
 }
 
-/* الخلفية السفلية */
 .services-bg {
     width: 100%;
     height: 320px;
@@ -189,7 +188,6 @@ if (!isset($_SESSION['visited'])) {
     border-radius: 120px 120px 0 0;
 }
 
-/* السلايدر */
 .services-slider {
     position: relative;
     height: 555px;
@@ -197,7 +195,6 @@ if (!isset($_SESSION['visited'])) {
     z-index: 2;
 }
 
-/* المجموعات */
 .services-container {
     position: absolute;
     top: 0;
@@ -208,7 +205,6 @@ if (!isset($_SESSION['visited'])) {
     justify-content: center;
     gap: 60px;
 
-    /* حل البطء */
     visibility: hidden;
     pointer-events: none;
 
@@ -218,7 +214,6 @@ if (!isset($_SESSION['visited'])) {
     transition: opacity .6s ease, transform .6s ease;
 }
 
-/* المجموعة النشطة فقط */
 .services-container.active {
     visibility: visible;
     pointer-events: auto;
@@ -241,11 +236,9 @@ if (!isset($_SESSION['visited'])) {
 
     border: 4px solid #cde4ff;
 
-    /* تحسين الأداء */
     will-change: transform;
 }
 
-/* الصورة */
 .service-img {
     width: 100%;
     height: 240px;
@@ -254,7 +247,6 @@ if (!isset($_SESSION['visited'])) {
     display: block;
 }
 
-/* النص */
 .service-text {
     font-size: 20px;
     margin-top: 18px;
