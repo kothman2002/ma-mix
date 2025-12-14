@@ -37,3 +37,49 @@
     }
 }
 
+@media (max-width: 768px) {
+
+    /* ===== HERO FIX ===== */
+    .hero {
+        height: 80vh;              /* أقصر */
+        margin-top: 70px;          /* نفس ارتفاع الهيدر */
+        background-position: center top;
+    }
+
+    .hero-overlay {
+        background: rgba(0,0,0,0.45); /* وضوح النص */
+    }
+
+    .hero-title {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        text-align: center;
+        width: 90%;
+    }
+
+    .hero-title img {
+        width: 260px;              /* تصغير اللوجو/العنوان */
+        max-width: 100%;
+    }
+
+    /* أي نص داخل الهيرو */
+    .hero h1,
+    .hero h2,
+    .hero p {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    /* الأيقونات العائمة */
+    .floating-icons {
+        left: 10px;
+        bottom: 15px;
+        gap: 10px;
+    }
+
+    .floating-icons img {
+        width: 55px;
+    }
+}
