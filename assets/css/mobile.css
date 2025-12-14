@@ -1,34 +1,38 @@
 @media (max-width: 768px) {
 
-    .menu-toggle {
-        display: block !important;
-        font-size: 34px;
+    /* زر المنيو */
+    .top-bar .menu-toggle {
+        display: block;
+        font-size: 32px;
         color: #fff;
         cursor: pointer;
         z-index: 10001;
     }
 
-    .nav-links {
-        position: fixed;
-        top: 90px;
+    /* روابط المنيو */
+    .top-bar .nav-links {
+        position: absolute;              /* بدل fixed */
+        top: 100%;
         right: 0;
         width: 100%;
+
         background: linear-gradient(to bottom, #2f4a80, #43a7cf);
 
+        display: none;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
-        padding: 25px 0;
+        gap: 18px;
+        padding: 20px 0;
 
-        display: none !important;
-        z-index: 10000;
+        z-index: 9999;
     }
 
-    .nav-links.active {
-        display: flex !important;
+    .top-bar .nav-links.active {
+        display: flex;
     }
 
-    .nav-links a {
-        font-size: 20px;
+    .top-bar .nav-links a {
+        font-size: 18px;
+        padding: 6px 0;
     }
 }
