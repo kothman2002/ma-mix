@@ -15,10 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt->bind_param("ssss", $name, $phone, $email, $message);
 
     if ($stmt->execute()) {
-        header("Location: index.php?contact=success");
+header("Location: /contact.php?contact=success");
         exit;
     } else {
-        header("Location: index.php?contact=error");
+        header("Location: /contact.php?contact=error");
         exit;
     }
 }

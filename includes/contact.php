@@ -32,5 +32,16 @@
         </div>
 
     </div>
+<?php if (isset($_GET['contact']) && $_GET['contact'] === 'success'): ?>
+    <div class="alert alert-success text-center">
+        تم إرسال رسالتك بنجاح ✅
+    </div>
+<?php endif; ?>
+
+<?php if (isset($_GET['contact']) && $_GET['contact'] === 'error'): ?>
+    <div class="alert alert-danger text-center">
+        حدث خطأ أثناء الإرسال ❌
+    </div>
+<?php endif; ?>
 
 </section>
