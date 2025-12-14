@@ -1,5 +1,4 @@
 <?php
-// رسائل الإرسال
 if (isset($_GET['contact']) && $_GET['contact'] === 'success') {
     echo '
     <div class="alert alert-success text-center" style="margin-bottom:20px;">
@@ -21,10 +20,8 @@ if (isset($_GET['contact']) && $_GET['contact'] === 'error') {
 
         <div class="contact-form-box">
 
-            <!-- الشعار -->
             <img src="/assets/img/m_mix_logo.png" class="contact-logo" alt="MA MIX Logo">
 
-            <!-- الفورم -->
             <form class="contact-form" method="POST" action="/includes/save_message.php">
 
                 <div class="input-group">
