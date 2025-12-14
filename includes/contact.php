@@ -1,27 +1,16 @@
-<?php
-if (isset($_GET['contact']) && $_GET['contact'] === 'success') {
-    echo '
-    <div class="alert alert-success text-center" style="margin-bottom:20px;">
-        تم إرسال رسالتك بنجاح ✅
-    </div>';
-}
-
-if (isset($_GET['contact']) && $_GET['contact'] === 'error') {
-    echo '
-    <div class="alert alert-danger text-center" style="margin-bottom:20px;">
-        حدث خطأ أثناء الإرسال ❌
-    </div>';
-}
-?>
-
 <section id="contact-section">
 
     <div class="contact-container">
         <div class="contact-form-box">
 
+            <!-- الشعار -->
             <img src="/assets/img/m_mix_logo.png" class="contact-logo" alt="MA MIX Logo">
 
-            <form class="contact-form" method="POST" action="/includes/save_message.php">
+            <!-- رسالة الإرسال -->
+            <div id="formMessage" style="margin-bottom:15px; font-weight:600;"></div>
+
+            <!-- الفورم -->
+            <form class="contact-form" id="contactForm">
 
                 <div class="input-group">
                     <input type="text" name="name" placeholder="Name" required>
@@ -47,3 +36,42 @@ if (isset($_GET['contact']) && $_GET['contact'] === 'error') {
     </div>
 
 </section>
+
+<!-- AJAX SCRIPT -->
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // منع إعادة التحميل
+
+    const form = this;
+    const formData = new FormData(form);
+    const msgBox = document.getElementById("formMessage");
+    const btn = form.querySelector(".send-btn");
+
+    btn.disabled = true;
+    btn.innerText = "Sending...";
+
+    fetch("/includes/save_message.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success") {
+            msgBox.innerHTML = "تم إرسال رسالتك بنجاح ✅";
+            msgBox.style.color = "#00ffcc";
+            form.reset(); // تفريغ الفورم
+        } else {
+            msgBox.innerHTML = "حدث خطأ أثناء الإرسال ❌";
+            msgBox.style.color = "#ffdddd";
+        }
+    })
+    .catch(() => {
+        msgBox.innerHTML = "خطأ في الاتصال بالسيرفر ❌";
+        msgBox.style.color = "#ffdddd";
+    })
+    .finally(() => {
+        btn.disabled = false;
+        btn.innerText = "Send";
+    });
+});
+</script>

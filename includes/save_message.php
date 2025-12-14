@@ -1,32 +1,28 @@
 <?php
 require_once __DIR__ . "/db.php";
+header("Content-Type: application/json");
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: /contact.php");
+    echo json_encode(["status" => "error"]);
     exit;
 }
 
-// get values safely
 $name    = $_POST['name'] ?? '';
 $email   = $_POST['email'] ?? '';
 $phone   = $_POST['phone'] ?? '';
 $message = $_POST['message'] ?? '';
 
-// prepare insert
-$sql = "INSERT INTO messages (name, email, phone, message) VALUES (?, ?, ?, ?)";
-$stmt = $conn->prepare($sql);
+$stmt = $conn->prepare(
+    "INSERT INTO messages (name, email, phone, message) VALUES (?, ?, ?, ?)"
+);
 
 if (!$stmt) {
-    header("Location: /contact.php?contact=error");
+    echo json_encode(["status" => "error"]);
     exit;
 }
 
 $stmt->bind_param("ssss", $name, $email, $phone, $message);
 
-if ($stmt->execute()) {
-    header("Location: /contact.php?contact=success");
-    exit;
-} else {
-    header("Location: /contact.php?contact=error");
-    exit;
-}
+echo json_encode([
+    "status" => $stmt->execute() ? "success" : "error"
+]);
