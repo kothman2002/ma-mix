@@ -37,31 +37,53 @@ if (!isset($_SESSION['visited'])) {
             background-color: #fff;
        }
 
-        /* ======================= NAVBAR ======================= */
-        .top-bar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            height: 90px;
-            background: linear-gradient(to right, #43a7cf, #2f4a80);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 60px;
-            z-index: 9999;
-            box-shadow: 0px 3px 10px rgba(0,0,0,0.15);
-        }
+        /* ======================= MOBILE NAV ======================= */
 
-        .nav-links { display: flex; gap: 45px; }
+.menu-toggle {
+    display: none;
+    font-size: 34px;
+    color: #fff;
+    cursor: pointer;
+}
 
-        .nav-links a {
-            color: #ffffff;
-            font-size: 22px;
-            font-weight: 600;
-            text-decoration: none;
-        }
+/* ---------- موبايل ---------- */
+@media (max-width: 991px) {
 
-        .logo { width: 172px; }
+    .top-bar {
+        padding: 0 20px;
+        height: 70px;
+    }
+
+    .logo {
+        width: 130px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: linear-gradient(to bottom, #2f4a80, #1f355c);
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+
+    .nav-links a {
+        padding: 16px;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
 
         /* ======================= HERO ======================= */
         .hero {
