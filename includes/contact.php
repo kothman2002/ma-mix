@@ -17,7 +17,6 @@ if (isset($_GET['contact']) && $_GET['contact'] === 'error') {
 <section id="contact-section">
 
     <div class="contact-container">
-
         <div class="contact-form-box">
 
             <img src="/assets/img/m_mix_logo.png" class="contact-logo" alt="MA MIX Logo">
@@ -45,7 +44,6 @@ if (isset($_GET['contact']) && $_GET['contact'] === 'error') {
             </form>
 
         </div>
-
     </div>
 
 </section>
