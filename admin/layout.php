@@ -70,9 +70,8 @@
 
 <!-- SIDEBAR -->
 <div class="sidebar text-center p-3">
-
-<img src="/assets/img/logo.png" alt="Logo">
-         
+    
+<img src="../assets/img/logo.png" alt="Logo"
          style="width:130px; margin-bottom:20px; filter: drop-shadow(0 0 3px rgba(0,0,0,0.2));">
 
     <a href="dashboard.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'active' : '' ?>">
