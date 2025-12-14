@@ -1,5 +1,4 @@
 <?php
-
 $host = "localhost";
 $user = "u505488632_ma_mix_user";    
 $pass = "Abo@khaled0";         
