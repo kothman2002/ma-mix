@@ -1,0 +1,150 @@
+/* =========================
+   MOBILE ONLY CSS – MA MIX
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* ===== منع السكرول الأفقي ===== */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* ===== إعدادات عامة للأقسام ===== */
+  section {
+    height: auto !important;
+    min-height: unset !important;
+    padding: 60px 16px !important;
+  }
+
+  /* =========================
+     NAVBAR (TOP BAR)
+     ========================= */
+
+  /* إخفاء روابط الديسكتوب */
+  .nav-links {
+    display: none !important;
+  }
+
+  /* ترتيب الهيدر */
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+  }
+
+  /* اللوجو */
+  .logo {
+    max-width: 120px;
+    height: auto;
+  }
+
+  /* زر ☰ */
+  .mobile-menu-btn {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000; /* عدلها إذا الهيدر غامق */
+    user-select: none;
+  }
+
+  /* =========================
+     MOBILE MENU
+     ========================= */
+
+  .mobile-menu {
+    position: fixed;
+    top: 75px;
+    right: 0;
+    width: 100%;
+    background: linear-gradient(to left, #3d78a5, #2b4c71);
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    z-index: 9999;
+  }
+
+  .mobile-menu a {
+    color: #fff;
+    padding: 16px;
+    font-size: 18px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+  }
+
+  .mobile-menu a:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-menu.show {
+    display: flex;
+  }
+
+  /* =========================
+     HERO SECTION
+     ========================= */
+
+  .hero,
+  .hero-section,
+  #hero {
+    height: 60vh !important;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+
+  /* =========================
+     TEXT CONTENT SECTIONS
+     ========================= */
+
+  .why-content,
+  .about-content,
+  .content-wrapper {
+    width: 100% !important;
+    padding: 20px !important;
+    text-align: center !important;
+  }
+
+  h1, h2, h3 {
+    font-size: 26px !important;
+    line-height: 1.4;
+  }
+
+  p {
+    font-size: 15px !important;
+    line-height: 1.7;
+  }
+
+  /* =========================
+     SERVICES
+     ========================= */
+
+  .services-container,
+  .services-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .service-card {
+    width: 100% !important;
+  }
+
+  /* =========================
+     PARTNERS
+     ========================= */
+
+  .partners-logos {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  /* =========================
+     FORMS
+     ========================= */
+
+  form {
+    width: 100% !important;
+  }
+
+}
