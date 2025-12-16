@@ -126,55 +126,48 @@
         margin-top: 15px;
     }
 }
+
 @media (max-width: 768px) {
 
-    #services {
-        overflow: hidden;
-    }
-
-    .services-container {
-        position: relative !important;
-    }
-
     /* =====================
-       SERVICES – MOBILE FIX
+       SERVICES – MOBILE FINAL FIX
     ====================== */
 
     #services {
         padding: 60px 15px !important;
         background: none !important;
+        overflow: visible !important;   /* مهم */
     }
 
     .services-bg {
-        display: none !important; /* الخلفية المنحنية */
+        display: none !important;
+    }
+
+    .services-slider {
+        height: auto !important;
     }
 
     .services-container {
-        position: static !important;
+        position: relative !important;
+        display: flex !important;
         flex-direction: column !important;
         gap: 25px !important;
-        opacity: 1 !important;
-        transform: none !important;
+
         visibility: visible !important;
+        opacity: 1 !important;
         pointer-events: auto !important;
+
+        transform: none !important;
+        height: auto !important;
     }
 
     .service-card {
         width: 100% !important;
         max-width: 360px;
         margin: 0 auto;
-        border-radius: 25px;
     }
 
     .service-img {
         height: 200px;
-    }
-
-    /* عنوان الدائرة */
-    .services-title,
-    .services-circle {
-        position: static !important;
-        margin: 0 auto 30px;
-        transform: none !important;
     }
 }
