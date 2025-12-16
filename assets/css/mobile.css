@@ -286,3 +286,45 @@
         opacity: 0.95;
     }
 }
+
+@media (max-width: 768px) {
+
+    /* =========================
+       PARTNERS – MOBILE FIX
+    ========================== */
+
+    #partners-section {
+        padding: 60px 0 !important;
+    }
+
+    .partners-container {
+        width: 90% !important;
+    }
+
+    .partners-title {
+        font-size: 28px !important;
+        margin-bottom: 35px !important;
+    }
+
+    .partners-title::after {
+        width: 60px !important;
+        height: 3px !important;
+        bottom: -12px !important;
+    }
+
+    /* نحول الصفوف إلى Grid */
+    .partners-row {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px !important;
+        margin-bottom: 35px !important;
+    }
+
+    .partners-row img {
+        width: 100px !important;
+        margin: auto;
+        opacity: 1 !important;
+        filter: none !important;
+        transform: none !important;
+    }
+}
