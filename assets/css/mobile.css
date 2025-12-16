@@ -126,3 +126,47 @@
         margin-top: 15px;
     }
 }
+@media (max-width: 768px) {
+
+    /* =====================
+       SERVICES – MOBILE FIX
+    ====================== */
+
+    #services {
+        padding: 60px 15px !important;
+        background: none !important;
+    }
+
+    .services-bg {
+        display: none !important; /* الخلفية المنحنية */
+    }
+
+    .services-container {
+        position: static !important;
+        flex-direction: column !important;
+        gap: 25px !important;
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+    }
+
+    .service-card {
+        width: 100% !important;
+        max-width: 360px;
+        margin: 0 auto;
+        border-radius: 25px;
+    }
+
+    .service-img {
+        height: 200px;
+    }
+
+    /* عنوان الدائرة */
+    .services-title,
+    .services-circle {
+        position: static !important;
+        margin: 0 auto 30px;
+        transform: none !important;
+    }
+}
