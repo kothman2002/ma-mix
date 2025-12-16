@@ -241,18 +241,28 @@
 @media (max-width: 768px) {
 
     /* =========================
-       WHY US SECTION – MOBILE FIX
+       WHY US – MOBILE FINAL FIX
     ========================== */
 
     #why-us-section {
-        height: auto !important;
-        padding: 60px 20px !important;
-        background: linear-gradient(to bottom, #3f7aa7, #2b4c71) !important;
+        height: auto !important;          /* أهم سطر */
+        min-height: unset !important;
+        padding: 70px 20px !important;
         display: block !important;
+        direction: rtl !important;
+        background: linear-gradient(
+            to bottom,
+            #3f7aa7,
+            #2b4c71
+        ) !important;
     }
 
-    /* نلغي التأثيرات الثقيلة */
+    /* نلغي الصورة والـ overlay */
     #why-us-section::before {
+        display: none !important;
+    }
+
+    .why-bg-left {
         display: none !important;
     }
 
@@ -266,14 +276,13 @@
 
     #why-us-section h2 {
         font-size: 28px !important;
-        margin-bottom: 20px;
-        text-align: right;
+        line-height: 1.4;
+        margin-bottom: 18px;
     }
 
     #why-us-section p {
         font-size: 16px !important;
         line-height: 1.9 !important;
-        text-align: right;
         opacity: 0.95;
     }
 }
